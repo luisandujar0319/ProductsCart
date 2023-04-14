@@ -1,0 +1,16 @@
+<header class="container-fluid p-0 m-0 pt-3 pb-3 bg-success">
+  <h4 class="text-white text-center">CART</h4>
+</header>
+<br>
+<div class="d-flex justify-content-center w-100">
+  <ul class="nav d-flex flex-column align-items-start">
+    <li class="nav-item d-flex flex-column justify-content-center align-items-start" *ngFor="let product of productsCar">
+      <img src="{{product.thumbnailUrl}}" alt="{{product.thumbnailUrl}}" width="150" height="150" />
+      <h6>
+        {{ product.title }}
+      </h6>
+      <button class="btn btn-danger" (click)="delete(product)">Delete to cart</button>
+      <hr>
+    </li>
+  </ul>
+</div>

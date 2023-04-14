@@ -1,0 +1,13 @@
+<app-loading *ngIf="getLoading"></app-loading>
+<div class="scro" *ngIf="!getLoading">
+  <router-outlet></router-outlet>
+</div>
+<footer *ngIf="!getLoading" class="container-fluid p-0 m-0 pt-3 pb-3 bg-success">
+  <div class="d-flex justify-content-center align-items-center">
+    <h4 class="text-white text-center pointer"
+    (click)="GoToProduct()">PRODUCTS</h4>
+    <span class="ml-4 mr-4"> | </span>
+    <h4 class="text-white text-center pointer d-flex justify-content-between align-items-center "
+        (click)="GoToCar()">CART <h1 class="text-danger ml-2 countHtml"> {{ getCountProducts }}</h1></h4>
+  </div>
+</footer>
